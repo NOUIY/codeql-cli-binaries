@@ -19,10 +19,11 @@
 
 ## Release 2.18.1 (2024-07-25)
 
-# Security Updates
+### Security Updates
 
-- Fixes CVE-2024-41807, an arbitrary file overwrite that can be triggered when
-  using untrusted third-party queries from a git repository. See the
+- Resolves CVE-2023-4759, an arbitrary file overwrite in Eclipse JGit
+  that can be triggered when using untrusted third-party queries from a
+  git repository. See the
   [security advisory](https://github.com/github/codeql-cli-binaries/security/advisories/GHSA-x4gx-f2xv-6wj9)
   for more information.
 - The following dependencies have been updated. These updates include
@@ -72,10 +73,10 @@
 ### Breaking changes
 
 - A number of breaking changes have been made to the C and C++ CodeQL
-  environment:
-  - The environment no longer defines any GNU-specific builtin macros.
-    If these macros are still needed, please define them via
-    `semmle-extractor-options`.
+  test environment as used by `codeql test run`:
+  - The test environment no longer defines any GNU-specific builtin
+    macros. If these macros are still needed by a test, please define
+    them via `semmle-extractor-options`.
   - The `--force-recompute` option is no longer directly supported by
     `semmle-extractor-options`. Instead, `--edg --force-recompute`
     should be specified.
