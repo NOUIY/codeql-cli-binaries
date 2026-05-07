@@ -17,7 +17,11 @@
      you know what to do).
 -->
 
-## Release 2.25.3 (2026-05-01)
+## Release 2.25.4 (2026-05-05)
+
+- There are no user-facing changes in this release.
+
+## Release 2.25.3 (2026-04-30)
 
 ### Improvements
 
