@@ -16,6 +16,22 @@
      checklist for a CLI release, you can edit here. But then
      you know what to do).
 -->
+
+## Release 2.26.3 (2026-08-12)
+
+### Improvements
+
+- Commands that accept a `--ram` option now report a clear error when given a value that is far too large to be a sensible amount of memory in megabytes (for example, a number of bytes passed by mistake), instead of failing with a cryptic "is not an int" message.
+
+### Bug Fixes
+
+- Fixed the pack upload format to comply with the OCI-image-manifest specification, by ensuring that all required fields are present/valid, and that no extraneous/non-compliant fields are included.
+- Fixed path canonicalization on Windows so that paths located on `subst`ed drives are always resolved to their underlying target paths. Previously, `subst`ed drives were not handled consistently by the CodeQL CLI and the language-specific extractors.
+
+### Miscellaneous
+
+- Upgraded Jackson from 2.18.6 to 2.18.9.
+
 ## Release 2.26.2 (2026-07-23)
 
 ### Breaking Changes
